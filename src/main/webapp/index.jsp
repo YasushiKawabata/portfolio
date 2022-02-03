@@ -19,6 +19,13 @@
 		<a class="btn btn--orange btn--radius" href="/bookManager/Login">ログイン</a>
 		<br>
 		<a class="btn btn--orange btn--radius" href="/bookManager/Login?action=register">ユーザー登録</a>
+		<div class="attention">
+			<p>
+			以下の技術を使用しました。<br>
+			Java(Servlet/JSP), MySQL, AWS(EC2, RDS), HTML, CSS, JavaScript, Google Books APIs
+			<p>
+			<a href="https://github.com/YasushiKawabata/portfolio"><button class="btn--blue">GitHubでソースコードを見る</button></a>
+		</div>
 	</div>
 	<footer>
 		<%@ include file="/WEB-INF/jsp/copyright.jsp" %>

@@ -57,10 +57,10 @@
 					</c:otherwise>
 				</c:choose>
 				<dt>進捗状況</dt>
-				<dd><label><input type="radio" name="readStatus" value="未読">未読</label>
-					<label><input type="radio" name="readStatus" value="読中">読中</label>
-					<label><input type="radio" name="readStatus" value="読了">読了</label>
-					<label><input type="radio" name="readStatus" value="未所持">未所持</label>
+				<dd><label><input type="radio" name="readStatus" value="未読" <c:if test="${book.readStatus=='未読' }">checked</c:if>>未読</label>
+					<label><input type="radio" name="readStatus" value="読中" <c:if test="${book.readStatus=='読中' }">checked</c:if>>読中</label>
+					<label><input type="radio" name="readStatus" value="読了" <c:if test="${book.readStatus=='読了' }">checked</c:if>>読了</label>
+					<label><input type="radio" name="readStatus" value="未所持" <c:if test="${book.readStatus=='未所持' }">checked</c:if>>未所持</label>
 				</dd>
 				<dt>評価</dt>
 				<dd><select name="evaluation">
@@ -79,13 +79,6 @@
 			<input type="hidden" name="bookId" value="${book.ID}">
 			<input class="btn btn--orange btn--radius" type="submit" value="更新">
 		</form>
-		<br>
-		<form action="/bookManager/Main?action=detail" method="post">
-			<input type="hidden" name="bookId" value="${book.ID}">
-			<input type="hidden" name="bookNo" value="${bookNo}">
-			<input class="btn btn--orange btn--radius" type="submit" value="詳細情報へ戻る">
-		</form>
-
 		<br>
 		<form action="/bookManager/Main?action=detail" method="post">
 			<input type="hidden" name="bookId" value="${book.ID}">

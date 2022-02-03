@@ -32,7 +32,9 @@
 			<input class="btn btn--orange btn--radius" type="submit" value="詳細情報へ戻る">
 		</form>
 
-		<a class="btn btn--orange btn--radius" href="/bookManager/Main">メインへ戻る</a>
+		<form action="/bookManager/Main" method="get">
+			<input class="btn btn--orange btn--radius" type="submit" value="メインへ戻る">
+		</form>
 	</div>
 	<footer>
 		<%@ include file="/WEB-INF/jsp/copyright.jsp" %>

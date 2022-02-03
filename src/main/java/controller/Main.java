@@ -152,8 +152,8 @@ public class Main extends HttpServlet {
 		}else if(action.equals("delete")) {
 			int bookId = Integer.parseInt(request.getParameter("bookId"));
 			UserBookDAO ubd =new UserBookDAO();
-			ubd.delete(user.getID(), bookId);
 			Book book = ubd.findByBookID(user, bookId);
+			ubd.delete(user.getID(), bookId);
 			if(book.getISBN() == null) {
 				BookDAO bd = new BookDAO();
 				bd.delete(bookId);
